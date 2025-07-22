@@ -72,7 +72,9 @@
         }
 
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 0.8rem 1.6rem;
             border: 2px solid #dc143c;
             color: #dc143c;
@@ -485,7 +487,7 @@
                     <div class="glass p-8">
                         <h2 class="section-title" id="about-title">Обо мне</h2>
                         <p class="text-lg leading-relaxed text-gray-200" id="about-content">
-                            Легенда скама под ником @genocide_scm. Многие меня знали, и с многими я до сих пор поддерживаю связь. В данный момент пытаюсь осознать свое предназначение что бы двигаться дальше. За всеми новостями следите в моем паблике по ссылкам ниже
+                            Легенда скама под ником @genocide_scm. Многие меня знали, и с многими я до сих пор поддерживаю связь. В данный момент пытаюсь осознать свое предназначение, чтобы двигаться дальше. За всеми новостями следите в моем паблике по ссылкам ниже.
                         </p>
                     </div>
                 </div>
@@ -498,9 +500,9 @@
                         <h2 class="section-title" id="projects-title">Проекты</h2>
                         <div class="grid-container">
                             <div class="card text-left">
-                                <h3 class="font-bold text-lg mb-2 text-crimson">Ozark Team</h3>
-                                <p class="text-sm text-gray-300 mb-3">Известная команда, которая была у всех на слуху 2 года назад. К сожалению, доступ утрачен.</p>
-                                <div class="text-xs text-crimson font-semibold">Legacy Project</div>
+                                <h3 class="font-bold text-lg mb-2 text-crimson" id="project-1-name">Ozark Team</h3>
+                                <p class="text-sm text-gray-300 mb-3" id="project-1-desc">Известная тима, которая была у всех на слуху 2 года назад. К сожалению, доступ утрачен.</p>
+                                <div class="text-xs text-crimson font-semibold" id="project-1-tech">Legacy Project</div>
                             </div>
                             <a
                                 href="https://t.me/+5Bu_VwbJ4-dkZjFk"
@@ -508,14 +510,14 @@
                                 rel="noopener noreferrer"
                                 class="card text-left no-underline"
                             >
-                                <h3 class="font-bold text-lg mb-2 text-crimson">Luriqque Channel</h3>
-                                <p class="text-sm text-gray-300 mb-3">Активный блог человека который разьебал трейд направление и достиг результата в 2.7 миллиона рублей всего лишь за полтора месяца</p>
-                                <div class="text-xs text-crimson font-semibold">Active Channel</div>
+                                <h3 class="font-bold text-lg mb-2 text-crimson" id="project-2-name">Luriqque Channel</h3>
+                                <p class="text-sm text-gray-300 mb-3" id="project-2-desc">Активный блог человека, который разъебал трейд направление и достиг результата в 2.7 миллиона рублей всего лишь за полтора месяца.</p>
+                                <div class="text-xs text-crimson font-semibold" id="project-2-tech">Active Channel</div>
                             </a>
                             <div class="card text-left">
-                                <h3 class="font-bold text-lg mb-2 text-crimson">Technical Support - Blaze Team</h3>
-                                <p class="text-sm text-gray-300 mb-3"> + Вайб тима в которой вы сможете познакомится со мной ближе да и заработать первоначальный капитал. Оставить заявку можете тут @BLAZE_TEAM_BOT</p>
-                                <div class="text-xs text-crimson font-semibold">Active Project</div>
+                                <h3 class="font-bold text-lg mb-2 text-crimson" id="project-3-name">Technical Support - Blaze Team</h3>
+                                <p class="text-sm text-gray-300 mb-3" id="project-3-desc">Вайб тима, в которой вы сможете познакомиться со мной ближе, да и заработать первоначальный капитал. Оставить заявку можете тут @BLAZE_TEAM_BOT</p>
+                                <div class="text-xs text-crimson font-semibold" id="project-3-tech">Active Project</div>
                             </div>
                         </div>
                     </div>
@@ -541,7 +543,7 @@
                                 >
                                     @lurique
                                 </a>
-                                <div class="text-xs text-gray-400">Основной канал связи</div>
+                                <div class="text-xs text-gray-400" id="contact-1-desc">Основной канал связи</div>
                             </div>
                             <div class="card">
                                 <div class="flex items-center justify-center mb-3">
@@ -556,7 +558,7 @@
                                 >
                                     luriqquecontact@gmail.com
                                 </a>
-                                <div class="text-xs text-gray-400">Деловая переписка</div>
+                                <div class="text-xs text-gray-400" id="contact-2-desc">Деловая переписка</div>
                             </div>
                             <div class="card">
                                 <div class="flex items-center justify-center mb-3">
@@ -571,7 +573,7 @@
                                 >
                                     Не указан
                                 </a>
-                                <div class="text-xs text-gray-400">Не указан</div>
+                                <div class="text-xs text-gray-400" id="contact-3-desc">Не указан</div>
                             </div>
                         </div>
                     </div>
@@ -598,13 +600,44 @@
                 },
                 about: {
                     title: "Обо мне",
-                    content: "Я известный воркер под прошлым никнеймом @genocide_scm. Многие меня знали, и с многими я до сих пор поддерживаю связь. Перешел в серое направление, начал увлекаться кодингом и дизайном. Все работы, которые вы увидите на моем канале — это мои личные проекты."
+                    content: "Легенда скама под ником @genocide_scm. Многие меня знали, и с многими я до сих пор поддерживаю связь. В данный момент пытаюсь осознать свое предназначение, чтобы двигаться дальше. За всеми новостями следите в моем паблике по ссылкам ниже."
                 },
                 projects: {
-                    title: "Проекты"
+                    title: "Проекты",
+                    items: [
+                        {
+                            name: "Ozark Team",
+                            description: "Известная тима, которая была у всех на слуху 2 года назад. К сожалению, доступ утрачен.",
+                            tech: "Legacy Project"
+                        },
+                        {
+                            name: "Luriqque Channel",
+                            description: "Активный блог человека, который разъебал трейд направление и достиг результата в 2.7 миллиона рублей всего лишь за полтора месяца.",
+                            tech: "Active Channel"
+                        },
+                        {
+                            name: "Technical Support - Blaze Team",
+                            description: "Вайб тима, в которой вы сможете познакомиться со мной ближе, да и заработать первоначальный капитал. Оставить заявку можете тут @BLAZE_TEAM_BOT",
+                            tech: "Active Project"
+                        }
+                    ]
                 },
                 contact: {
-                    title: "Контакты"
+                    title: "Контакты",
+                    items: [
+                        {
+                            name: "Telegram",
+                            description: "Основной канал связи"
+                        },
+                        {
+                            name: "Email",
+                            description: "Деловая переписка"
+                        },
+                        {
+                            name: "WhatsApp",
+                            description: "Не указан"
+                        }
+                    ]
                 },
                 footer: {
                     rights: "Все права защищены Luriqqie Corp."
@@ -618,13 +651,44 @@
                 },
                 about: {
                     title: "About Me",
-                    content: "I'm a well-known worker under the previous nickname @genocide_scm. Many knew me, and I still keep in touch with many. Moved to the gray direction and started getting into coding and design. All the work you see on my channel are my personal projects."
+                    content: "Legend of scam under the nickname @genocide_scm. Many knew me, and I still keep in touch with many. Currently trying to realize my purpose to move forward. Follow all the news in my public via the links below."
                 },
                 projects: {
-                    title: "Projects"
+                    title: "Projects",
+                    items: [
+                        {
+                            name: "Ozark Team",
+                            description: "Famous team that was on everyone's lips 2 years ago. Unfortunately, access is lost.",
+                            tech: "Legacy Project"
+                        },
+                        {
+                            name: "Luriqque Channel",
+                            description: "Active blog of a person who destroyed the trading direction and achieved a result of 2.7 million rubles in just a month and a half.",
+                            tech: "Active Channel"
+                        },
+                        {
+                            name: "Technical Support - Blaze Team",
+                            description: "Vibe team where you can get to know me better and earn initial capital. You can leave a request here @BLAZE_TEAM_BOT",
+                            tech: "Active Project"
+                        }
+                    ]
                 },
                 contact: {
-                    title: "Contacts"
+                    title: "Contacts",
+                    items: [
+                        {
+                            name: "Telegram",
+                            description: "Main communication channel"
+                        },
+                        {
+                            name: "Email",
+                            description: "Business correspondence"
+                        },
+                        {
+                            name: "WhatsApp",
+                            description: "Not specified"
+                        }
+                    ]
                 },
                 footer: {
                     rights: "All rights reserved Luriqqie Corp."
@@ -648,9 +712,21 @@
             
             // Update projects
             document.getElementById('projects-title').textContent = content.projects.title;
+            document.getElementById('project-1-name').textContent = content.projects.items[0].name;
+            document.getElementById('project-1-desc').textContent = content.projects.items[0].description;
+            document.getElementById('project-1-tech').textContent = content.projects.items[0].tech;
+            document.getElementById('project-2-name').textContent = content.projects.items[1].name;
+            document.getElementById('project-2-desc').textContent = content.projects.items[1].description;
+            document.getElementById('project-2-tech').textContent = content.projects.items[1].tech;
+            document.getElementById('project-3-name').textContent = content.projects.items[2].name;
+            document.getElementById('project-3-desc').textContent = content.projects.items[2].description;
+            document.getElementById('project-3-tech').textContent = content.projects.items[2].tech;
             
             // Update contact
             document.getElementById('contact-title').textContent = content.contact.title;
+            document.getElementById('contact-1-desc').textContent = content.contact.items[0].description;
+            document.getElementById('contact-2-desc').textContent = content.contact.items[1].description;
+            document.getElementById('contact-3-desc').textContent = content.contact.items[2].description;
             
             // Update footer
             document.getElementById('footer-rights').textContent = '© 2025 ' + content.footer.rights;
@@ -695,4 +771,4 @@
         });
     </script>
 </body>
-</html>`;
+</html>
